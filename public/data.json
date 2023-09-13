@@ -26,10 +26,10 @@
     },
     {
       "id": 4,
-      "name": "Iron Horse",
-      "author": "Allen Ginsberg",
+      "name": "dune",
+      "author": "frank herbert",
       "price": 18,
-      "img": "https://imgs.search.brave.com/5DlfTNtciOhs99vCzyA2EWHQ-uKcxtFI7J7c8CwTY-E/rs:fit:313:225:1/g:ce/aHR0cHM6Ly90c2Uy/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5K/cXRfQnJOaktuaGho/bWNqX0Y1OXZRQUFB/QSZwaWQ9QXBp",
+      "img": "https://images.cdn3.buscalibre.com/fit-in/360x360/0c/00/0c00cbb74142643771a16065636dd0e3.jpg",
       "quanty": 1
     }
   ]
