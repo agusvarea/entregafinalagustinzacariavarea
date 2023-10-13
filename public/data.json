@@ -5,7 +5,8 @@
       "author": "Mark Millar",
       "price": 10,
       "img": "https://i1.whakoom.com/small/28/0d/c25866f058944127ac7c6ddc90f889ce.jpg",
-      "quanty": 1
+      "quanty": 1,
+      "category": "nuevos ingresos"
     },
     {
       "id": 2,
@@ -13,7 +14,8 @@
       "author": "Chip Zdarsky ",
       "price": 20,
       "img": "https://i1.whakoom.com/small/05/0d/064a593b18f645929d0ba24ca00177fb.jpg",
-      "quanty": 1
+      "quanty": 1,
+      "category": "nuevos ingresos"
     },
   
     {
@@ -22,7 +24,8 @@
       "author": "Bendis, Schiti, Isanove",
       "price": 27,
       "img": "https://i1.whakoom.com/small/37/25/9f7d9af41e9a439eb3a44ae067a69497.jpg",
-      "quanty": 1
+      "quanty": 1,
+      "category": "mas vendidos"
     },
     {
       "id": 4,
@@ -30,6 +33,7 @@
       "author": "Kevin Smith ",
       "price": 18,
       "img": "https://i1.whakoom.com/small/32/18/5f23b0492ed54579b101b3df00981eb1.jpg",
-      "quanty": 1
+      "quanty": 1,
+      "category": "mas vendidos"
     }
   ]

@@ -1,12 +1,22 @@
-import { useContext } from "react";
-import { dataContext } from "../Context/DataContext";
+import {  useEffect, useState } from "react";
 import "./products.css"
+import axios from "axios";
+import { Link, useParams } from "react-router-dom";
 
 const Products = () => {
-  const {data, cart, setcart} = useContext(dataContext);
-  const buyproducts = (product) =>{
-    setcart([...cart, product])
-  }
+  const[data, setdata] = useState([]);
+  const {categoryId}=useParams()
+  useEffect(() =>{
+    axios("../data.json")
+    .then((res)=> {
+      if(categoryId){
+        setdata(res.data.filter((item)=>item.category === categoryId))
+      }else{
+        setdata(res.data)
+      }
+    });
+}, [categoryId]);
+
 
   return data.map((product)=>{
     return (
@@ -14,7 +24,7 @@ const Products = () => {
             <img src={product.img} alt="img-product-card"></img>
             <h3>{product.name}</h3>
             <h4>{product.price}$</h4>
-            <button onClick={()=> buyproducts(product)}>Comprar</button>
+            <Link to={'/detail/'+product.id} >Ir al detalle</Link>
         </div>
     );
   });

@@ -19,6 +19,15 @@
     cursor: pointer;
 }
 
+.category{
+    font-size: 25px;
+    margin-right: 20px;
+    margin-top: 4vh;
+    cursor: pointer;
+    text-decoration: none;
+    color: white; 
+}
+
 .seecarrito{
     font-size: 25px;
     margin-right: 20px;
