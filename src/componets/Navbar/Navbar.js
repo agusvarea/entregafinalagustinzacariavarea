@@ -7,7 +7,10 @@ const Navbar = () => {
         <h1 className="navbar-logo">Shop.</h1>
         <Link className="category" to='/category/nuevos ingresos'>Nuevos Ingresos</Link>
         <Link className="category" to='/category/mas vendidos'>Mas Vendidos</Link>
-        <Link className="seecarrito" to={"/cart"}>🛒</Link>
+        <Link className="seecarrito" to={"/cart"}>
+          🛒
+          {cart.length > 0 ? <TotalItems /> : null}
+        </Link>
         </nav>
     </div>
   )

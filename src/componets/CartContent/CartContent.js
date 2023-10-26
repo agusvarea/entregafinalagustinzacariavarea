@@ -1,20 +1,28 @@
 import { useContext } from "react";
 import { dataContext } from "../Context/DataContext";
 
-import Cartelements from "./cartelements"
-import Carttotal from "./carttotal";
-import "./cartcontent.css";
-const CartContent = () => {
-  const{cart} = useContext(dataContext);
+import CartElements from "./CartElements";
+import CartTotal from "./CartTotal";
+import Navbar from "../Navbar/Navbar";
 
-  return cart.length > 0 ? (
+import "./CartContent.css";
+
+const CartContent = () => {
+  const { cart } = useContext(dataContext);
+
+  return (
     <>
-     <Cartelements />
-     <Carttotal />
+      <Navbar />
+      {cart.length > 0 ? (
+        <>
+          <CartElements />
+          <CartTotal />
+        </>
+      ) : (
+        <h2 className='cart-message-center'>Your cart is empty</h2>
+      )}
     </>
-  ): (
-    <h2 className="cart-message-center"> tu carrito esta vacio </h2>
-  )
+  );
 };
 
 export default CartContent
