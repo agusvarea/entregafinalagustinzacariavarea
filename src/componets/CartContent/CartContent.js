@@ -1,11 +1,10 @@
 import { useContext } from "react";
 import { dataContext } from "../Context/DataContext";
-
 import CartElements from "./CartElements";
-import CartTotal from "./CartTotal";
+import CartTotal from "./carttotal";
 import Navbar from "../Navbar/Navbar";
 
-import "./CartContent.css";
+import "./cartcontent.css";
 
 const CartContent = () => {
   const { cart } = useContext(dataContext);
@@ -24,5 +23,6 @@ const CartContent = () => {
     </>
   );
 };
+
 
 export default CartContent

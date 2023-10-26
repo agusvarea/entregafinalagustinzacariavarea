@@ -3,23 +3,39 @@ import { dataContext } from "../Context/DataContext";
 import "./products.css"
 import axios from "axios";
 import { Link, useParams } from "react-router-dom";
+import { collection, getDocs, query } from "firebase/firestore";
+import { db } from "../../services/firebase";
 
 const Products = () => {
-  const[data, setdata] = useState([]);
+  const[data, setData] = useState([]);
   const {categoryId}=useParams();
   const { buyProducts } = useContext(dataContext);
-  useEffect(() =>{
+useEffect(() =>{
     axios("data.json").then((res) => setData(res.data));
     axios("../data.json")
     .then((res)=> {
       if(categoryId){
-        setdata(res.data.filter((item)=>item.category === categoryId))
+        setData(res.data.filter((item)=>item.category === categoryId))
       }else{
-        setdata(res.data)
+        setData(res.data)
       }
     });
 }, [categoryId]);
 
+//useEffect(()=>{
+//  const coleccionProductos = categoryId ? query(collection(db, "productos"), where("category", "==", categoryId)):collection(db, "productos")
+//  getDocs(coleccionProductos)
+//  .then((res)=> {
+//    const list = res.docs.map((product)=>{
+//      return{
+//        id:product.id,
+//        ...product.data()
+//      }
+//    })
+//    setData(list)
+//  })
+//  .catch((error)=> console.log(error))
+//},[categoryId])
 
   return data.map((product)=>{
     return (

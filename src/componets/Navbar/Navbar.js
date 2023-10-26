@@ -1,6 +1,10 @@
 import "./navbar.css";
 import { Link } from "react-router-dom";
+import TotalItems from '../CartContent/TotalItems'
+import { useContext } from "react";
+import { dataContext } from "../Context/DataContext";
 const Navbar = () => {
+  const {cart}= useContext(dataContext)
   return (
     <div className="nav-container">
         <nav className="navbar">
@@ -15,5 +19,6 @@ const Navbar = () => {
     </div>
   )
 }
+
 
 export default Navbar
